@@ -26,7 +26,6 @@
 
     let model;
 
-    // Replace 'path/to/model.glb' with your actual model URL
     loader.load(
       'Neural_Growth.glb',
       function (gltf) {
@@ -35,7 +34,7 @@
       },
       undefined,
       function (error) {
-        console.error('An error happened while loading the model:', error);
+        console.error('Error loading model:', error);
       }
     );
 
