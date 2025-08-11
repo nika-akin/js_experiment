@@ -23,17 +23,13 @@
     light.position.set(5, 5, 5);
     scene.add(light);
 
-    const axesHelper = new THREE.AxesHelper(5);
-    scene.add(axesHelper);
-
-    const loader = new GLTFLoader();
-
     let model;
 
-    loader.load('Neural_Growth.glb', function (gltf) {
+    const loader = new GLTFLoader();
+    loader.load('Neural_Growth.glb', (gltf) => {
       model = gltf.scene;
       scene.add(model);
-    }, undefined, function (error) {
+    }, undefined, (error) => {
       console.error('Error loading model:', error);
     });
 
