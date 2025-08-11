@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Three.js GLB Model Loader</title>
+  <title>Three.js GLB Loader</title>
   <style>body { margin: 0; overflow: hidden; }</style>
 </head>
 <body>
@@ -26,17 +26,12 @@
 
     let model;
 
-    loader.load(
-      'Neural_Growth.glb',
-      function (gltf) {
-        model = gltf.scene;
-        scene.add(model);
-      },
-      undefined,
-      function (error) {
-        console.error('Error loading model:', error);
-      }
-    );
+    loader.load('model.glb', function (gltf) {
+      model = gltf.scene;
+      scene.add(model);
+    }, undefined, function (error) {
+      console.error('Error loading model:', error);
+    });
 
     function animate() {
       requestAnimationFrame(animate);
