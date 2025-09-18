@@ -38,7 +38,7 @@ controls.dampingFactor = 0.05;
 const loader = new THREE.TextureLoader();
 Promise.all([
     loader.loadAsync('./textures/satellite.jpg'), // satellite image
-    loader.loadAsync('./textures/dem.png')        // grayscale heightmap
+    loader.loadAsync('./textures/dem.jpg')        // grayscale heightmap
 ]).then(([satelliteTex, demTex]) => {
     const size = 512; // grid resolution
     const geometry = new THREE.PlaneGeometry(1000, 1000, size-1, size-1);
